@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tyler Ransom by tyleransom</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- New GA4 tracking code, see https://support.google.com/analytics/answer/10271001#analyticsjs-enable-basic --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GNJD50R0Z7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GNJD50R0Z7');
+    </script>
+
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+    
+    <style>
+      button.accordion {
+      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      transition: 0.3s;
+      background-color: #f8f8f8;
+      }
+      button.accordion.active, button.accordion:hover {
+      background-color: #f8f8f8;
+      }
+      button.accordion:after {
+      content: " [+] ";
+      font-size: 90%;
+      color:#777;
+      float: left;
+      margin-left: 1px;
+      }
+
+      button.accordion.active:after {
+      content: " [\2212] ";
+      }
+      div.panel {
+      padding: 0 20px;
+      margin-top: 5px;
+      display: none;
+      background-color: white;
+      font-size: 100%;
+      }
+      div.panel.show {
+      display: block !important;
+      }
+      .social-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+  <header>
+        <h1>Zeyi Qian</h1>
+        <p>PhD Candidate in Economics<br>Clark University</p>
+        <p>Research Interests:<br>Urban Economics and International Trade</p>
+         <h3><a href="https://ZeyiQian.github.io/">Home</a></h3>
+       
+    <h3><a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a></h3> 
+       <h3><a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">CV(Chinese)</a></h3>
+  <!--   <h3><p class="view"><a href="https://zeyiqian.github.io/">Home</a></p></h3> -->
+ 
+    <p class="view"><b>Social</b><br>
+        <a href="mailto:zeqian@clarku.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
+        <a href="http://github.com/ZeyiQian"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
+        <a href="https://twitter.com/ZQian_UrbanEcon" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a><br>
+        <a href="http://linkedin.com/in/zeyi-qian-b04288208/" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br>
+    <p><b>Contact:</b><br>Department of Economics<br>Clark University<br>950 Main Street<br>Worcester, MA 01610</p>
+      </header>
+      <section>
+
+
+
+
+    <hr>
+
+   
+
+    <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
+    <p style="margin:0"> Coming soon. <br> <br> 
+    
+
+   
+  
+    <hr>
+
+    <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Works in Progress</h2>
+
+    <p style="margin:0"> <b>Estimating Round-Tripping FDI from Firm-Level Data in China</b> <br> with Junfu Zhang and Qiangyuan Chen</a>. <br><button class="accordion">
+      Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> When capital leaves a country and then flows back as Foreign Direct Investment (FDI), we call it round-tripping FDI. It is widely suspected that China's official FDI statistics contain a substantial amount of round-tripping FDI. However, it is difficult to quantify the round-tripping FDI due to the lack of data. In this paper, we propose two methods to identify round-tripping FDI. The first one tracks capital flows at firm level. If a firm in China invests in a foreign firm and the foreign firm makes an investment back to China shortly after, then we consider this investment to China as round-tripping FDI. Our second measure of round-tripping FDI adds to the first measure by including investments in China made by Chinese investors/firms registered in tax havens. By this second method, round-tripping FDI accounts for as much as 65 percent of the total FDI China received from 1999 to 2015. Our firm-level analysis shows that industrial enterprises facing higher tax burdens are more likely to make round-tripping FDI. We also show that at the city level, adjusted FDI statistics by subtracting the estimated round-tripping FDI are better predictors of local imports and exports. Finally, we show that provinces receiving higher shares of round-tripping FDI are more likely to be punished for illegal financial activities. Taken together, these findings suggest that our measures of round-tripping FDI, although noisy, are indicative of real transactions. </p></div><br>
+
+  
+
+    
+    <h2><a id="published-papers(in Chinese)" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="http://jjll.ruc.edu.cn/EN/Y2022/V42/I3/100">International Twin Cities and Chinese Export Activities</a> <br> <br> <i>Economic Theory and Business Management</i> <br><button class="accordion"> 
+    Abstract
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;"><p> As an important supplement to formal agreements and institutional arrangements, the establishment of international twin cities has strengthened trust and in-depth communication between cities, becoming an important catalyst and booster for international economic cooperation.Based on the perspective of foreign trade high-quality development, this paper examines the impact of the“circle of friends” formed by international twin cities on the export trade between cities using the data of matching pairs between 287 Chinese cities and 136 countries or regions in 2002-2015.The results find that: (1)The agree ments ofinternational twin cities have significantly promoted the export volumeand export value of Chinese cities by 10.0%and 11.6% respectively.(2) The trade promotion effect of international twin cities is more derived from trade creation rather than trade transfer. (3）In addition to affecting exports by intensive margins, international twin cities have also promoted the expansion margins of exports in terms of the number of product types and the proportion of high-tech industries.(4)With SARS and the global financial crisis as incident impacts, the agreements of international twin cities has strengthened the ability of Chinese cities to resist risks in exports. (5)The results of heterogeneity analysis show that the agree ments of international twin cities have more obvious export promotion effect on non-Belt and Road countries and geographically adjacent countries in China. </p></div><br>
+
+
+
+
+      </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    <script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
+  </body>
+</html>
+t
