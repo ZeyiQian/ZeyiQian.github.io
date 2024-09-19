@@ -133,8 +133,19 @@ aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Assist
 <br>  <p style="margin:0"> <b>Shanghai University & Renmin University of China</b> <br>Fall 2018 to Spring 2021, supervised by <a href="http://nads.ruc.edu.cn/jgsz/qzjs/fjs/598426381a9b40a8b0f1736dc945b447.htm">Dr. Qiangyuan Chen </a> 
 
       </section>
-     
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script> 
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.parentNode.nextElementSibling.classList.toggle("show");
+      }
+    }
+    </script>
   </body>
 </html>
+
