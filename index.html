@@ -124,14 +124,16 @@ body {
 <style>
   .image-container {
     max-width: 400px;
-    margin: 0 auto; 
-  }
-  .image-container img {
-    width: 100%;
-    height: auto;
-    border: none;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    margin: 0 auto; }
+  .profile-headshot {
+    /* 设定您想要的大小，例如 250px x 250px */
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; /* 变成圆形 */
+    object-fit: cover; /* 确保图片不变形 */
+    border: 8px solid #ffffff; /* 专业的白色边框 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    margin-top: 10px; 
   }
 </style>
 
@@ -141,6 +143,7 @@ body {
 <div class="image-container">
   <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
 </div>
+    
      <!-- <div style="border: 1px solid #e0e0e0; padding: 20px; background-color: #f9f9f9; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #444; margin-top: 10px;">-->
      <div style="padding: 10px 20px 5px 20px; background-color: #f9f9f9; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #444; margin-top: 10px;line-height: 1.6;">
       
