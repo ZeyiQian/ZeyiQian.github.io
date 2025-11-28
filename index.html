@@ -74,19 +74,37 @@
       /* ====== 新增/修改样式以实现顶部导航栏和照片-文字布局 ====== */
       
       /* 顶部导航容器：用于容纳 Home, Research, Teaching, CV */
-      .top-navigation {
-          display: flex;
-          justify-content: flex-end; /* 导航链接靠右对齐 */
-          gap: 20px; /* 链接之间的间距 */
-          padding: 10px 0;
-          border-bottom: 1px solid #eee; /* 底部加一条细线，可选 */
-      }
-      .top-navigation a {
-          text-decoration: none;
-          color: #333;
-          font-weight: bold;
-          font-size: 1.1em;
-      }
+/* 顶部导航容器：使用 Flexbox 分割左右空间 */
+.top-navigation {
+    display: flex;
+    /* 关键：让左侧元素靠左，右侧元素靠右，中间留出最大空间 */
+    justify-content: space-between; 
+    align-items: center; /* 垂直居中对齐 */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; 
+}
+
+/* 导航链接样式 */
+.top-navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* 姓名样式 */
+.top-navigation .name-title {
+    font-size: 1.4em; /* 稍微大一点 */
+    font-weight: bold;
+    color: #000;
+    margin-right: auto; /* 确保它与链接组有足够的间隙，虽然 space-between 已经处理了 */
+}
+
+/* 导航链接分组容器：让所有链接紧密排列在右侧 */
+.nav-links {
+    display: flex;
+    gap: 20px; /* 链接之间的间距 */
+}
 
       /* 移除 Header 中原有的导航链接样式 */
       header h3 {
