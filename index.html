@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Zeyi Qian, Clark University</title>
@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,7 +19,6 @@
       ga('send', 'pageview');
     </script>
 
-    <!-- For all browsers --><!-- background-color: #f0f0f0-->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
     <link rel="stylesheet" href="assets/css/academicons.min1.css"/>
@@ -32,18 +27,9 @@
     <style>
       body {
         background-color: #ffffff;
-
       }
-/*
-body {
-  background-color: #ffffff;
-  background-image: url('Clark1.png'); 
-  background-position: left center; 
-  background-size: auto 75%; 
-  background-repeat: no-repeat;
-}
-*/
       
+      /* 您的其他样式... */
       button.accordion {
       font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
       cursor: pointer;
@@ -84,79 +70,151 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
       }
+      
+      /* ====== 新增的样式用于实现两栏布局 ====== */
+      
+      /* 头部导航的容器，保持不变 */
+      header {
+          text-align: right; /* 导航链接靠右 */
+      }
+      header h1 {
+          display: none; /* 隐藏原有的姓名大标题 */
+      }
+      
+      /* 主内容容器：使用 Flexbox 实现并排 */
+      .main-content-row {
+          display: flex;
+          align-items: flex-start; /* 顶部对齐 */
+          gap: 30px; /* 左右间距 */
+          margin-top: 20px;
+      }
+      
+      /* 左侧栏：照片和个人信息 */
+      .profile-sidebar {
+          flex: 0 0 200px; /* 固定宽度，您可以调整 */
+          text-align: center;
+      }
+      
+      /* 右侧栏：欢迎语和研究介绍 */
+      .intro-text-column {
+          flex-grow: 1; /* 占据剩余空间 */
+          padding-top: 20px; /* 调整与左侧内容的垂直对齐 */
+      }
+
+      /* 联系按钮的容器 */
+      .contact-buttons {
+          margin-top: 15px;
+          display: flex;
+          justify-content: center;
+          gap: 5px; /* 按钮之间的间距 */
+          flex-wrap: wrap;
+      }
+      
+      /* 模拟目标页面按钮的样式 */
+      .contact-buttons a {
+          display: inline-block;
+          padding: 6px 10px;
+          border: 1px solid #ccc;
+          text-decoration: none;
+          color: #333;
+          font-size: 14px;
+          border-radius: 4px;
+          background-color: #f7f7f7;
+          /* 确保按钮内的文本不换行 */
+          white-space: nowrap; 
+      }
+      .contact-buttons a:hover {
+          background-color: #eaeaea;
+      }
+      
+      /* 照片样式（略作修改，使其更贴合目标页面） */
+      .profile-headshot {
+          width: 120px; /* 缩小照片尺寸以适应左侧栏 */
+          height: 120px; 
+          border-radius: 50%; 
+          object-fit: cover; 
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+          margin-bottom: 10px;
+      }
+      
+      /* 个人信息文本样式 */
+      .profile-text h2 {
+          font-size: 1.5em; /* 姓名大小 */
+          margin: 0 0 5px 0;
+      }
+      .profile-text p {
+          font-size: 1em; /* 职位大小 */
+          margin: 0 0 5px 0;
+      }
+      
+      /* 响应式调整：当屏幕宽度较小时，改为上下排列 */
+      @media (max-width: 768px) {
+          .main-content-row {
+              flex-direction: column; /* 垂直堆叠 */
+              gap: 15px;
+          }
+          .profile-sidebar {
+              flex: 1 1 100%; /* 占据全部宽度 */
+              text-align: left; /* 左对齐 */
+          }
+          .contact-buttons {
+              justify-content: flex-start; /* 按钮左对齐 */
+          }
+      }
     </style>
 
   </head>
   
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Zeyi Qian (钱则一)</h1>
-        <br>
-       <!-- <p>Economics Ph.D. Candidate,<br>Clark University</p>
-        <!-- <p>Research Interests:<br>Urban Economics and International Trade</p>-->
-        <h3><a href="https://ZeyiQian.github.io/">Home</a></h3>
-        <h3><a href="https://ZeyiQian.github.io/research.html">Research</a></h3> 
-        <h3><a href="https://ZeyiQian.github.io/teaching.html">Teaching</a></h3>
-        <!--    <h3><a href="https://ZeyiQian.github.io/others.html">Others</a></h3>-->
-        <h3><a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>丨<a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a></h3>    
-
-        <p class="view"><b>Social</b><br>
-          <a href="mailto:zeqian@clarku.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
-          <a href="http://github.com/ZeyiQian"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
-          <a href="https://twitter.com/ZYQian_ECON" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a><br>
-        <!--  <a href="https://www.linkedin.com/in/zeyi-qian-b04288208/" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br> 
-        <!--  <a href="https://orcid.org/0009-0000-6632-1411" class="author-social" target="_blank"><i class="fa fa-fw fa-orcid"></i> ORCID</a><br>-->
-
-         <p><b>Contact:</b><br><a href="https://www.clarku.edu/departments/economics/phd-program/">Department of Economics<br><a href="https://www.clarku.edu/">Clark University<br>950 Main Street<br>Worcester, MA 01610</a></p>
-      </header>
-      
-
-       <section>
-  <h3>
-<br>
-   <!--   <div style="display: inline-block;; margin-left: 50px;">
-      <img src="fig1.png" height="300" width="400" style="border: none; box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); border-radius: 10px;">
-    </div>-->
-<!--<div style="text-align: center;">
-  <img src="fig1.png" style="max-width: 100%; height: auto; border: none; box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); border-radius: 10px;" alt="Figure">
-</div>-->
-<style>
-  .image-container {
-    max-width: 400px; 
-    margin: 0 auto 0 auto; 
-    text-align: center;
-  }
-  .profile-headshot {
-    width: 180px; 
-    height: 180px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 8px solid #ffffff; 
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
-    margin-top: 10px; 
-  }
-</style>
-
- <!--<div class="image-container">
-  <img src="f.jpg" alt="Figure">
-</div>-->
-<div class="image-container">
-  <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
-</div>
-    <br>
-     <!-- <div style="border: 1px solid #e0e0e0; padding: 20px; background-color: #f9f9f9; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #444; margin-top: 10px;">-->
-     <div style="padding: 10px 20px 5px 20px; background-color: #f9f9f9; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #444; margin-top: 10px;line-height: 1.6;">
-      
-       <!-- <p style="text-align: left; font-size: 16px; color: #555; margin-top: 10px;">-->
-       <p >
-      &#9656; Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
-      &#9656; My research focuses on <b>urban economics</b> and <b>international trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
-      &#9656; I am currently on the <b>2025-2026 job market</b>.
-    </p>
-  </h3>
-</section>
+        <header>
+            <h2>Zeyi Qian (钱则一)</h2>
+            <p>Economics Ph.D. Candidate, Clark University</p>
+            <div style="text-align:right;">
+                <h3><a href="https://ZeyiQian.github.io/">Home</a></h3>
+                <h3><a href="https://ZeyiQian.github.io/research.html">Research</a></h3> 
+                <h3><a href="https://ZeyiQian.github.io/teaching.html">Teaching</a></h3>
+                <h3><a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>丨<a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a></h3>
+            </div>
+        </header>
+        
+        <section class="main-content-row">
             
+            <div class="profile-sidebar">
+                <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
+                
+                <div class="profile-text">
+                    <p style="font-size:1.3em; font-weight: bold; margin-bottom: 0;">Zeyi Qian (钱则一)</p>
+                    <p style="margin-top: 0;">Ph.D. Candidate of Economics<br>Clark University</p>
+                </div>
+
+                <div class="contact-buttons">
+                    <a href="mailto:zeqian@clarku.edu" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+                    <a href="https://ZeyiQian.github.io/CV_ZQ.pdf" target="_blank">CV</a>
+                    <a href="http://github.com/ZeyiQian" target="_blank"><i class="fa fa-fw fa-github-square"></i> GitHub</a>
+                    <a href="https://twitter.com/ZYQian_ECON" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+                </div>
+            </div>
+
+            <div class="intro-text-column">
+                <p style="font-size: 15px; color: #444; line-height: 1.6;">
+                    Hi! I am a Ph.D. candidate in Economics at Clark University. <br>
+                    My research focuses on <b>urban economics</b> and <b>international trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
+                    I am currently on the <b>2025-2026 job market</b>.
+                </p>
+                
+                </div>
+        </section>
+        
+        <aside>
+          <p class="view"><b>Social</b><br>
+            <a href="mailto:zeqian@clarku.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
+            <a href="http://github.com/ZeyiQian"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
+            <a href="https://twitter.com/ZYQian_ECON" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a><br>
+          </p>
+          <p><b>Contact:</b><br><a href="https://www.clarku.edu/departments/economics/phd-program/">Department of Economics<br><a href="https://www.clarku.edu/">Clark University<br>950 Main Street<br>Worcester, MA 01610</a></p>
+        </aside>
+
     </div>
     <script src="javascripts/scale.fix.js"></script>
   </body>
