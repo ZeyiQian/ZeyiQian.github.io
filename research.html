@@ -1,119 +1,162 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Zeyi Qian, Clark University</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Zeyi Qian, Clark University</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 响应式布局的关键 meta 标签 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link rel="stylesheet" href="stylesheets/github-light.css">
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
 
-  <style>
-    body {
-      background-color: #ffffff;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
-    html, body {
-  margin: 0;
-  padding: 0;
+    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
+    html, body {
+  margin: 0;
+  padding: 0;
 }
 .wrapper {
-  /* 限制最大宽度、居中显示 */
-  max-width: 1000px;
-  margin: 0 auto;
-  /* 给内容向下留一些空白 */
-  padding: 20px 10px 0 10px; /* 增加左右内边距，防止内容贴边 */
+  /* 可选：限制最大宽度、居中显示 */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* 新增 — 给内容向下留一些空白 */
+  padding-top: 20px;
 }
 
-    .top-navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-    }
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-    .top-navigation a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    .top-navigation .name-title {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #000;
-    }
+    .top-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .top-navigation a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .top-navigation .name-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+    }
 
-    /* *** 移除所有用于创建分栏的 CSS *** */
-    /* main-profile-area 保持默认 block 布局 */
-    .main-profile-area {
-      display: block; 
-      margin-top: 30px;
-    }
-    /* .profile-headshot, .profile-info, .intro-text, .intro-box 的样式可以移除，
-       但保留与内容相关的样式以防万一 */
-    .intro-box {
-      padding: 10px 20px 5px 20px;
-      background-color: #f9f9f9;
-      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #444;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
+    .main-profile-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .profile-info {
+      flex: 0 0 300px;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .intro-text {
+      flex-grow: 1;
+      padding-top: 5px;
+    }
 
-    /* --- 响应式 (mobile) 部分: 确保在小屏幕上也是单列 --- */
-    @media only screen and (max-width: 768px) {
-      .wrapper {
-        width: 100%;
-        padding: 20px 10px 0 10px;
-      }
-      .top-navigation {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      .main-profile-area {
-          /* 保持单列默认样式 */
-        margin-top: 20px;
-      }
-      .intro-box {
-        padding: 10px 15px;
-        font-size: 14px;
-      }
-    }
-  </style>
+    .profile-headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-info h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .profile-info p {
+      font-size: 1.1em;
+      margin: 0 0 10px 0;
+      color: #555;
+    }
+
+    .intro-box {
+      padding: 10px 20px 5px 20px;
+      background-color: #f9f9f9;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #444;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
+    @media only screen and (max-width: 768px) {
+      .wrapper {
+        width: 100%;
+        padding: 0 10px;
+      }
+      .top-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .main-profile-area {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .profile-info {
+        flex: none;
+        width: 100%;
+        padding-top: 0;
+      }
+      .intro-text {
+        width: 100%;
+        padding-top: 0;
+      }
+      .profile-headshot {
+        width: 150px;
+        height: 150px;
+      }
+      .intro-box {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <nav class="top-navigation">
-      <span class="name-title">Zeyi Qian (钱则一)</span>
-      <div class="nav-links">
-        <a href="https://ZeyiQian.github.io/">HOME</a>
-        <a href="https://ZeyiQian.github.io/research.html">RESEARCH</a>
-        <a href="https://ZeyiQian.github.io/teaching.html">TEACHING</a>
-        <a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>
-        <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a>
-      </div>
-    </nav>
-    
-    <div class="main-profile-area">
+  <div class="wrapper">
+    <nav class="top-navigation">
+      <span class="name-title">Zeyi Qian (钱则一)</span>
+      <div class="nav-links">
+        <a href="https://ZeyiQian.github.io/">HOME</a>
+        <a href="https://ZeyiQian.github.io/research.html">RESEARCH</a>
+        <a href="https://ZeyiQian.github.io/teaching.html">TEACHING</a>
+        <a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>
+        <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a>
+      </div>
+    </nav>
+
         
       <section>
           <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upcoming Presentations</h2>
@@ -200,7 +243,7 @@
         <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://ZeyiQian.github.io/Otherpaper.html">Other Works</a></h2> 
       </section>
       
-    </div>     
+  
     <script src="javascripts/scale.fix.js"></script>
   </div>
 </body>
