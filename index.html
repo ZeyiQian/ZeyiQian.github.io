@@ -21,10 +21,17 @@
     }
 
     /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
-    .wrapper {
-      max-width: 1000px; /* 或者你想要的宽度 */
-      margin: 0 auto;
-    }
+    html, body {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  /* 可选：限制最大宽度、居中显示 */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* 新增 — 给内容向下留一些空白 */
+  padding-top: 20px;
+}
 
     .top-navigation {
       display: flex;
@@ -175,15 +182,7 @@
       &#9656; My research focuses on <b>Urban Economics</b> and <b>International Trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
       &#9656; I am currently on the <b>2025-2026 job market</b>.
           </p>
-        </div>
-       <section>
-         <!--&amp; Academic Engagements-->
-    <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scheduled Presentations</h2>
-
-  <p style="margin:0">  <del>November 22-24, 2025, Southern Economic Association Annual Meeting, Tampa, FL<del> </p> </b>
-  <p style="margin:0">  <del>November 14-16, 2025, Midwest International Trade & Theory Conference, Penn State, PA<del> </p> </b>
-  <p style="margin:0"> <del>March 21-23, 2025, Midwest Economics Association Annual Meeting, Kansas City, MO<del> </p> </b>
-    </section>  
+        </div> 
       </div>
     </div>
   </div>
