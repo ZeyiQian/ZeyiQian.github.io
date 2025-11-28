@@ -1,192 +1,184 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Zeyi Qian, Clark University</title>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Zeyi Qian, Clark University</title>
 
-    <!-- 强制视口 (viewport) 宽度 = 设备屏幕宽度，初始缩放 = 1 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 响应式布局的关键 meta 标签 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
 
-    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-      body {
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-      }
+    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
+    .wrapper {
+      max-width: 1000px; /* 或者你想要的宽度 */
+      margin: 0 auto;
+    }
 
-      button.accordion {
-        font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        cursor: pointer;
-        padding: 0px;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 100%;
-        transition: 0.3s;
-        background-color:  #f0f0f0;
-      }
-      button.accordion.active, button.accordion:hover {
-        background-color:  #f0f0f0;
-      }
-      button.accordion:after {
-        content: " [+] ";
-        font-size: 90%;
-        color:#777;
-        float: left;
-        margin-left: 1px;
-      }
-      button.accordion.active:after {
-        content: " [\2212] ";
-      }
-      div.panel {
-        padding: 0 20px;
-        margin-top: 5px;
-        display: none;
-        background-color: white;
-        font-size: 100%;
-      }
-      div.panel.show {
-        display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
+    .top-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .top-navigation a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .top-navigation .name-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+    }
 
+    .main-profile-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .profile-info {
+      flex: 0 0 350px;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .intro-text {
+      flex-grow: 1;
+      padding-top: 5px;
+    }
+
+    .profile-headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-info h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .profile-info p {
+      font-size: 1.1em;
+      margin: 0 0 10px 0;
+      color: #555;
+    }
+
+    .intro-box {
+      padding: 10px 20px 5px 20px;
+      background-color: #f9f9f9;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #444;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
+    @media only screen and (max-width: 768px) {
+      .wrapper {
+        width: 100%;
+        padding: 0 10px;
+      }
       .top-navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        border-bottom: 1px solid #eee;
+        flex-direction: column;
+        align-items: flex-start;
       }
       .nav-links {
-        display: flex;
-        gap: 30px;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
       }
-      .top-navigation a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        font-size: 1.1em;
-      }
-      .top-navigation .name-title {
-        font-size: 1.4em;
-        font-weight: bold;
-        color: #000;
-      }
-      header h3 {
-        display: none;
-      }
-
       .main-profile-area {
-        display: flex;
-        align-items: flex-start;
-        gap: 30px;
-        margin-top: 30px;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
       }
       .profile-info {
-        flex: 0 0 350px;
-        text-align: center;
-        padding-top: 5px;
+        flex: none;
+        width: 100%;
+        padding-top: 0;
       }
       .intro-text {
-        flex-grow: 1;
-        padding-top: 5px;
-      }
-      .image-container {
-        max-width: 400px;
-        margin: 0 auto 0 auto;
-        text-align: center;
+        width: 100%;
+        padding-top: 0;
       }
       .profile-headshot {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 8px solid #ffffff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        margin-top: 10px;
-        margin-bottom: 15px;
-      }
-      .profile-info h1 {
-        font-size: 1.8em;
-        margin-top: 0;
-        margin-bottom: 5px;
-      }
-      .profile-info p {
-        font-size: 1.1em;
-        margin: 0 0 10px 0;
-        color: #555;
+        width: 150px;
+        height: 150px;
       }
       .intro-box {
-        padding: 10px 20px 5px 20px;
-        background-color: #f9f9f9;
-        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 15px;
-        color: #444;
-        margin-top: 10px;
-        line-height: 1.6;
+        padding: 10px 15px;
+        font-size: 14px;
       }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  <body>
-    <div class="wrapper">
-      <nav class="top-navigation">
-        <span class="name-title">Zeyi Qian (钱则一)</span>
-        <div class="nav-links">
-          <a href="https://ZeyiQian.github.io/">HOME</a>
-          <a href="https://ZeyiQian.github.io/research.html">RESEARCH</a>
-          <a href="https://ZeyiQian.github.io/teaching.html">TEACHING</a>
-          <a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>
-          <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a>
+<body>
+  <div class="wrapper">
+    <nav class="top-navigation">
+      <span class="name-title">Zeyi Qian (钱则一)</span>
+      <div class="nav-links">
+        <a href="https://ZeyiQian.github.io/">HOME</a>
+        <a href="https://ZeyiQian.github.io/research.html">RESEARCH</a>
+        <a href="https://ZeyiQian.github.io/teaching.html">TEACHING</a>
+        <a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>
+        <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a>
+      </div>
+    </nav>
+
+    <div class="main-profile-area">
+      <div class="profile-info">
+        <div class="image-container">
+          <img src="f.jpg" alt="Headshot" class="profile-headshot">
         </div>
-      </nav>
-
-      <div class="main-profile-area">
-        <div class="profile-info">
-          <div class="image-container">
-            <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
-          </div>
-
-          <div class="contact-buttons" style="display: flex; justify-content: center; gap: 8px;">
-            <a href="mailto:zeqian@clarku.edu" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
-            <a href="https://twitter.com/ZYQian_ECON" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
-            <a href="http://github.com/ZeyiQian" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-github-square"></i> GitHub</a>
-          </div>
-        </div>
-
-        <div class="intro-text">
-          <div class="intro-box">
-            <p>
-              ► Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
-              ► My research focuses on <b>Urban Economics</b> and <b>International Trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br>
-              ► I am currently on the <b>2025-2026 job market</b>.
-            </p>
-          </div>
-          <br>
-          <section>
-            <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upcoming Presentations</h2>
-
-            <p style="margin:0"><del>November 22-24, 2025, Southern Economic Association Annual Meeting, Tampa, FL</del></p>  
-            <p style="margin:0"><del>November 14-16, 2025, Midwest International Trade & Theory Conference, Penn State, PA</del></p>  
-            <p style="margin:0"><del>March 21-23, 2025, Midwest Economics Association Annual Meeting, Kansas City, MO</del></p>
-          </section>
-          <br>
-          <hr>
+        <div class="contact-buttons" style="display: flex; justify-content: center; gap: 8px;">
+          <a href="mailto:zeqian@clarku.edu" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #f7f7f7; text-decoration: none; color: #444;">
+            <i class="fa fa-fw fa-envelope-square"></i> Email
+          </a>
+          <a href="https://twitter.com/ZYQian_ECON" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #f7f7f7; text-decoration: none; color: #444;">
+            <i class="fa fa-fw fa-twitter-square"></i> Twitter
+          </a>
+          <a href="http://github.com/ZeyiQian" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #f7f7f7; text-decoration: none; color: #444;">
+            <i class="fa fa-fw fa-github-square"></i> GitHub
+          </a>
         </div>
       </div>
-    </div>
 
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+      <div class="intro-text">
+        <div class="intro-box">
+          <p>
+            ► Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
+            ► My research focuses on <b>Urban Economics</b> and <b>International Trade</b>...<br>
+            ► I am currently on the <b>2025-2026 job market</b>.
+          </p>
+        </div>
+        <!-- 其他内容 -->
+      </div>
+    </div>
+  </div>
+</body>
 </html>
