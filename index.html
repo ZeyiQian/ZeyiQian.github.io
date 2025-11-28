@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Zeyi Qian, Clark University</title>
@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,7 +19,6 @@
       ga('send', 'pageview');
     </script>
 
-    <!-- For all browsers --><!-- background-color: #f0f0f0-->
     <link rel="stylesheet" href="assets/css/academicons.min.css"/>
     <link rel="stylesheet" href="assets/css/academicons.css"/>
     <link rel="stylesheet" href="assets/css/academicons.min1.css"/>
@@ -32,58 +27,84 @@
     <style>
       body {
         background-color: #ffffff;
-
       }
-/*
-body {
-  background-color: #ffffff;
-  background-image: url('Clark1.png'); 
-  background-position: left center; 
-  background-size: auto 75%; 
-  background-repeat: no-repeat;
-}
-*/
-      
+
+      /* 您的其他样式... */
       button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color:  #f0f0f0;
+        font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        cursor: pointer;
+        padding: 0px;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 100%;
+        transition: 0.3s;
+        background-color:  #f0f0f0;
       }
       button.accordion.active, button.accordion:hover {
-      background-color:  #f0f0f0;
+        background-color:  #f0f0f0;
       }
       button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
+        content: " [+] ";
+        font-size: 90%;
+        color:#777;
+        float: left;
+        margin-left: 1px;
       }
 
       button.accordion.active:after {
-      content: " [\2212] ";
+        content: " [\2212] ";
       }
       div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
+        padding: 0 20px;
+        margin-top: 5px;
+        display: none;
+        background-color: white;
+        font-size: 100%;
       }
       div.panel.show {
-      display: block !important;
+        display: block !important;
       }
       .social-row {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
+      /* --- 关键修改：照片和容器样式 --- */
+      .image-container {
+        /* 移除原有的居中设置，以允许浮动 */
+        max-width: 400px; 
+        margin: 0; /* 移除 auto margin */
+        text-align: left;
+        float: left; /* 关键：左浮动 */
+        margin-right: 25px; /* 在照片右侧添加间距，让文字环绕 */
+        margin-bottom: 25px; /* 在照片下方添加间距 */
+      }
+      .profile-headshot {
+        width: 180px; 
+        height: 180px; 
+        border-radius: 50%; 
+        object-fit: cover; 
+        border: 8px solid #ffffff; 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+        margin-top: 10px; 
+      }
+      /* 确保自我介绍文字不会被标题/其他元素干扰 */
+      .intro-content {
+          overflow: auto; /* 包含浮动元素 */
+          padding: 10px 0 5px 0; /* 调整顶部间距 */
+          font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+          font-size: 15px; 
+          color: #444; 
+          line-height: 1.6;
+      }
+      /* 清除浮动，确保后面的内容从新行开始 */
+      .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+      }
+      
     </style>
 
   </head>
@@ -93,69 +114,38 @@ body {
       <header>
         <h1>Zeyi Qian (钱则一)</h1>
         <br>
-       <!-- <p>Economics Ph.D. Candidate,<br>Clark University</p>
-        <!-- <p>Research Interests:<br>Urban Economics and International Trade</p>-->
         <h3><a href="https://ZeyiQian.github.io/">Home</a></h3>
         <h3><a href="https://ZeyiQian.github.io/research.html">Research</a></h3> 
         <h3><a href="https://ZeyiQian.github.io/teaching.html">Teaching</a></h3>
-        <!--    <h3><a href="https://ZeyiQian.github.io/others.html">Others</a></h3>-->
         <h3><a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>丨<a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a></h3>    
 
         <p class="view"><b>Social</b><br>
           <a href="mailto:zeqian@clarku.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
           <a href="http://github.com/ZeyiQian"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
           <a href="https://twitter.com/ZYQian_ECON" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a><br>
-        <!--  <a href="https://www.linkedin.com/in/zeyi-qian-b04288208/" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a><br> 
-        <!--  <a href="https://orcid.org/0009-0000-6632-1411" class="author-social" target="_blank"><i class="fa fa-fw fa-orcid"></i> ORCID</a><br>-->
-
+        
          <p><b>Contact:</b><br><a href="https://www.clarku.edu/departments/economics/phd-program/">Department of Economics<br><a href="https://www.clarku.edu/">Clark University<br>950 Main Street<br>Worcester, MA 01610</a></p>
       </header>
       
 
-       <section>
-  <h3>
-<br>
-   <!--   <div style="display: inline-block;; margin-left: 50px;">
-      <img src="fig1.png" height="300" width="400" style="border: none; box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); border-radius: 10px;">
-    </div>-->
-<!--<div style="text-align: center;">
-  <img src="fig1.png" style="max-width: 100%; height: auto; border: none; box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); border-radius: 10px;" alt="Figure">
-</div>-->
-<style>
-  .image-container {
-    max-width: 400px; 
-    margin: 0 auto 0 auto; 
-    text-align: center;
-  }
-  .profile-headshot {
-    width: 180px; 
-    height: 180px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-    border: 8px solid #ffffff; 
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
-    margin-top: 10px; 
-  }
-</style>
+       <section class="clearfix"> <h3><br></h3>
+          
+          <div class="image-container">
+            <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
+          </div>
+          
+          <div class="intro-content">
+              <h2 style="margin-top: 10px; font-size: 1.5em;">Zeyi Qian (钱则一)</h2>
+              <p style="font-size: 1.1em; margin-top: -10px;">Ph.D. Candidate in Economics, Clark University</p>
 
- <!--<div class="image-container">
-  <img src="f.jpg" alt="Figure">
-</div>-->
-<div class="image-container">
-  <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
-</div>
-    <br>
-     <!-- <div style="border: 1px solid #e0e0e0; padding: 20px; background-color: #f9f9f9; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #444; margin-top: 10px;">-->
-     <div style="padding: 10px 20px 5px 20px; background-color: #f9f9f9; font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; color: #444; margin-top: 10px;line-height: 1.6;">
-      
-       <!-- <p style="text-align: left; font-size: 16px; color: #555; margin-top: 10px;">-->
-       <p >
-      &#9656; Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
-      &#9656; My research focuses on <b>urban economics</b> and <b>international trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
-      &#9656; I am currently on the <b>2025-2026 job market</b>.
-    </p>
-  </h3>
-</section>
+              <p style="margin-top: 15px;">
+                  &#9656; Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
+                  &#9656; My research fields are <b>urban economics</b> and <b>international trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
+                  &#9656; I am currently on the <b>2025-2026 job market</b>.
+              </p>
+          </div>
+          
+          </section>
             
     </div>
     <script src="javascripts/scale.fix.js"></script>
