@@ -1,245 +1,290 @@
 <!doctype html>
 <html>
-  <head>
-    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Zeyi Qian, Clark University</title>
+  <head>
+    <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Zeyi Qian, Clark University</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-29643011-3', 'auto');
-      ga('send', 'pageview');
-    </script>
+      ga('create', 'UA-29643011-3', 'auto');
+      ga('send', 'pageview');
+    </script>
 
-    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.css"/>
-    <link rel="stylesheet" href="assets/css/academicons.min1.css"/>
-    <link rel="stylesheet" href="assets/css/academicons1.css"/>
-    
-    <style>
-      body {
-        background-color: #ffffff;
-      }
-      
-      /* 保持原有样式，此处省略... */
-      button.accordion {
-      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-      cursor: pointer;
-      padding: 0px;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 100%;
-      transition: 0.3s;
-      background-color:  #f0f0f0;
-      }
-      button.accordion.active, button.accordion:hover {
-      background-color:  #f0f0f0;
-      }
-      button.accordion:after {
-      content: " [+] ";
-      font-size: 90%;
-      color:#777;
-      float: left;
-      margin-left: 1px;
-      }
+    <link rel="stylesheet" href="assets/css/academicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.css"/>
+    <link rel="stylesheet" href="assets/css/academicons.min1.css"/>
+    <link rel="stylesheet" href="assets/css/academicons1.css"/>
+    
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      
+      /* 保持原有样式，此处省略... */
+      button.accordion {
+      font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      cursor: pointer;
+      padding: 0px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 100%;
+      transition: 0.3s;
+      background-color:  #f0f0f0;
+      }
+      button.accordion.active, button.accordion:hover {
+      background-color:  #f0f0f0;
+      }
+      button.accordion:after {
+      content: " [+] ";
+      font-size: 90%;
+      color:#777;
+      float: left;
+      margin-left: 1px;
+      }
 
-      button.accordion.active:after {
-      content: " [\2212] ";
-      }
-      div.panel {
-      padding: 0 20px;
-      margin-top: 5px;
-      display: none;
-      background-color: white;
-      font-size: 100%;
-      }
-      div.panel.show {
-      display: block !important;
-      }
-      .social-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      
-      /* ====== 关键修改：顶部导航栏样式 ====== */
-      
-      /* 顶部导航容器：使用 Flexbox 分割左右空间 */
-      .top-navigation {
-          display: flex;
-          /* 关键：让姓名和链接组之间分配最大空间 */
-          justify-content: space-between; 
-          align-items: center; /* 垂直居中对齐 */
-          padding: 10px 0;
-          border-bottom: 1px solid #eee; 
-      }
+      button.accordion.active:after {
+      content: " [\2212] ";
+      }
+      div.panel {
+      padding: 0 20px;
+      margin-top: 5px;
+      display: none;
+      background-color: white;
+      font-size: 100%;
+      }
+      div.panel.show {
+      display: block !important;
+      }
+      .social-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      /* ====== 关键修改：顶部导航栏样式 ====== */
+      
+      /* 顶部导航容器：使用 Flexbox 分割左右空间 */
+      .top-navigation {
+          display: flex;
+          /* 关键：让姓名和链接组之间分配最大空间 */
+          justify-content: space-between; 
+          align-items: center; /* 垂直居中对齐 */
+          padding: 10px 0;
+          border-bottom: 1px solid #eee; 
+      }
 
-      /* 导航链接分组容器：确保链接之间有间隔 */
-      .nav-links {
-          display: flex;
-          /* 链接之间的间距 */
-          gap: 30px; 
-      }
+      /* 导航链接分组容器：确保链接之间有间隔 */
+      .nav-links {
+          display: flex;
+          /* 链接之间的间距 */
+          gap: 30px; 
+      }
 
-      /* 导航链接样式 */
-      .top-navigation a {
-          text-decoration: none;
-          color: #333;
-          font-weight: bold;
-          font-size: 1.1em;
-      }
+      /* 导航链接样式 */
+      .top-navigation a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+          font-size: 1.1em;
+      }
 
-      /* 姓名样式 (左侧顶格) */
-      .top-navigation .name-title {
-          font-size: 1.4em; 
-          font-weight: bold;
-          color: #000;
-      }
+      /* 姓名样式 (左侧顶格) */
+      .top-navigation .name-title {
+          font-size: 1.4em; 
+          font-weight: bold;
+          color: #000;
+      }
 
-      /* 移除 Header 中原有的导航链接样式 */
-      header h3 {
-          display: none;
-      }
+      /* 移除 Header 中原有的导航链接样式 */
+      header h3 {
+          display: none;
+      }
 
-      /* ====== 关键修改：主内容区布局样式 ====== */
+      /* ====== 关键修改：主内容区布局样式 (桌面版) ====== */
 
-      /* 左侧照片和信息布局 (两栏布局的容器) */
-      .main-profile-area {
-          display: flex;
-          align-items: flex-start;
-          gap: 30px;
-          margin-top: 30px;
-      }
-      
-      /* 左栏：照片、姓名、职位 */
-      .profile-info {
-          flex: 0 0 350px; /* 固定左栏宽度 */
-          text-align: center;
-          padding-top: 5px; 
-      }
-      
-      /* 右栏：介绍文字 */
-      .intro-text {
-          flex-grow: 1;
-          padding-top: 5px;
-      }
-      
-      /* 照片样式 */
-      .image-container {
-        max-width: 400px;  
-        margin: 0 auto 0 auto;  
-        text-align: center;
-      }
-      .profile-headshot {
-        width: 180px;  
-        height: 180px;  
-        border-radius: 50%;  
-        object-fit: cover;  
-        border: 8px solid #ffffff;  
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
-        margin-top: 10px;  
-        margin-bottom: 15px; 
-      }
-      
-      /* 姓名和职位样式 */
-      .profile-info h1 {
-          font-size: 1.8em;
-          margin-top: 0;
-          margin-bottom: 5px;
-      }
-      .profile-info p {
-          font-size: 1.1em;
-          margin: 0 0 10px 0;
-          color: #555;
-      }
-      
-      /* 隐藏原有的侧栏联系信息 */
-      header .view, header p {
-          display: none;
-      }
+      /* 左侧照片和信息布局 (两栏布局的容器) */
+      .main-profile-area {
+          display: flex;
+          align-items: flex-start;
+          gap: 30px;
+          margin-top: 30px;
+      }
+      
+      /* 左栏：照片、姓名、职位 */
+      .profile-info {
+          flex: 0 0 350px; /* 固定左栏宽度 */
+          text-align: center;
+          padding-top: 5px; 
+      }
+      
+      /* 右栏：介绍文字 */
+      .intro-text {
+          flex-grow: 1;
+          padding-top: 5px;
+      }
+      
+      /* 照片样式 */
+      .image-container {
+        max-width: 400px;  
+        margin: 0 auto 0 auto;  
+        text-align: center;
+      }
+      .profile-headshot {
+        width: 180px;  
+        height: 180px;  
+        border-radius: 50%;  
+        object-fit: cover;  
+        border: 8px solid #ffffff;  
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);  
+        margin-top: 10px;  
+        margin-bottom: 15px; 
+      }
+      
+      /* 姓名和职位样式 */
+      .profile-info h1 {
+          font-size: 1.8em;
+          margin-top: 0;
+          margin-bottom: 5px;
+      }
+      .profile-info p {
+          font-size: 1.1em;
+          margin: 0 0 10px 0;
+          color: #555;
+      }
+      
+      /* 隐藏原有的侧栏联系信息 */
+      header .view, header p {
+          display: none;
+      }
 
-      /* 介绍部分的底色框样式 */
-      .intro-box {
-          padding: 10px 20px 5px 20px;  
-          background-color: #f9f9f9;  
-          font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;  
-          font-size: 15px;  
-          color: #444;  
-          margin-top: 10px;
-          line-height: 1.6;
-      }
-      
-    </style>
+      /* 介绍部分的底色框样式 */
+      .intro-box {
+          padding: 10px 20px 5px 20px;  
+          background-color: #f9f9f9;  
+          font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+          font-size: 15px;  
+          color: #444;  
+          margin-top: 10px;
+          line-height: 1.6;
+      }
 
-  </head>
-  
-  <body>
-    <div class="wrapper">
-      
-      <nav class="top-navigation">
-          <span class="name-title">Zeyi Qian (钱则一)</span>
-          
-          <div class="nav-links">
-              <a href="https://ZeyiQian.github.io/">HOME</a>
-              <a href="https://ZeyiQian.github.io/research.html">RESEARCH</a>
-              <a href="https://ZeyiQian.github.io/teaching.html">TEACHING</a>
-              <a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>
-              <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a>
-          </div>
-      </nav>
-      
-      <div class="main-profile-area">
-          
-          <div class="profile-info">
-              <div class="image-container">
-                  <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
-              </div>
-              
-                           <div class="contact-buttons" style="display: flex; justify-content: center; gap: 8px;">
-                  <a href="mailto:zeqian@clarku.edu" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
-                <a href="https://twitter.com/ZYQian_ECON" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>  
-                  <a href="http://github.com/ZeyiQian" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-github-square"></i> GitHub</a>
+      /* ======================================= */
+      /* ====== 响应式调整 (Mobile/Tablet) ====== */
+      /* ======================================= */
 
-              </div>
-          </div>
-          
-          <div class="intro-text">
-            <div class="intro-box">
-              <p>
-                &#9656; Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
-                &#9656; My research focuses on <b>Urban Economics</b> and <b>International Trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
-                &#9656; I am currently on the <b>2025-2026 job market</b>.
-              </p>
-            </div>
-            <br>
-                   <section>
-         <!--&amp; Academic Engagements-->
-    <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upcoming Presentations</h2>
+      @media (max-width: 768px) {
+          /* 1. 顶部导航栏：切换为垂直堆叠 */
+          .top-navigation {
+              flex-direction: column; /* 姓名和链接组垂直堆叠 */
+              padding: 10px;
+          }
 
-  <p style="margin:0">  <del>November 22-24, 2025, Southern Economic Association Annual Meeting, Tampa, FL<del> </p> </b>
-  <p style="margin:0">  <del>November 14-16, 2025, Midwest International Trade & Theory Conference, Penn State, PA<del> </p> </b>
-  <p style="margin:0"> <del>March 21-23, 2025, Midwest Economics Association Annual Meeting, Kansas City, MO<del> </p> </b>
+          /* 导航链接：居中对齐，并允许换行 */
+          .nav-links {
+              justify-content: center;
+              gap: 15px;
+              margin-top: 10px;
+              flex-wrap: wrap; /* 空间不足时允许链接换行 */
+          }
+          
+          /* 2. 主内容区：切换为垂直堆叠 */
+          .main-profile-area {
+              flex-direction: column; /* 两栏切换为单栏 */
+              gap: 0;
+              margin-top: 20px;
+          }
+          
+          /* 3. 左侧栏信息：取消固定宽度，占据全部宽度 */
+          .profile-info {
+              flex: 1 1 auto; /* 允许宽度自适应 */
+              width: 100%;
+              padding: 0 10px;
+          }
+          
+          /* 4. 右侧介绍文字：确保全宽并调整边距 */
+          .intro-text {
+              padding-top: 10px;
+              padding-left: 10px;
+              padding-right: 10px;
+              width: auto;
+          }
 
-        
+          /* 5. 联系按钮行：调整间距 */
+          .contact-buttons {
+              gap: 5px !important; /* 缩小按钮间距 */
+          }
+      }
+    </style>
+
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      
+      <nav class="top-navigation">
+          <span class="name-title">Zeyi Qian (钱则一)</span>
+          
+          <div class="nav-links">
+              <a href="https://ZeyiQian.github.io/">HOME</a>
+              <a href="https://ZeyiQian.github.io/research.html">RESEARCH</a>
+              <a href="https://ZeyiQian.github.io/teaching.html">TEACHING</a>
+              <a href="https://ZeyiQian.github.io/CV_ZQ.pdf">CV</a>
+              <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf">简历</a>
+          </div>
+      </nav>
+      
+      <div class="main-profile-area">
+          
+          <div class="profile-info">
+              <div class="image-container">
+                  <img src="f.jpg" alt="Zeyi Qian Headshot" class="profile-headshot">
+              </div>
+              
+                           <div class="contact-buttons" style="display: flex; justify-content: center; gap: 8px;">
+                  <a href="mailto:zeqian@clarku.edu" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+                <a href="https://twitter.com/ZYQian_ECON" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>  
+                  <a href="http://github.com/ZeyiQian" style="padding: 5px 10px; border: 1px solid #ccc; text-decoration: none; color: #444; border-radius: 4px; background-color: #f7f7f7;"><i class="fa fa-fw fa-github-square"></i> GitHub</a>
+
+              </div>
+          </div>
+          
+          <div class="intro-text">
+            <div class="intro-box">
+              <p>
+                &#9656; Hello! I am a Ph.D. candidate in Economics at Clark University. <br>
+                &#9656; My research focuses on <b>Urban Economics</b> and <b>International Trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
+                &#9656; I am currently on the <b>2025-2026 job market</b>.
+              </p>
+            </div>
+            <br>
+                   <section>
+             <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upcoming Presentations</h2>
+
+  <p style="margin:0">  <del>November 22-24, 2025, Southern Economic Association Annual Meeting, Tampa, FL<del> </p> </b>
+  <p style="margin:0">  <del>November 14-16, 2025, Midwest International Trade & Theory Conference, Penn State, PA<del> </p> </b>
+  <p style="margin:0"> <del>March 21-23, 2025, Midwest Economics Association Annual Meeting, Kansas City, MO<del> </p> </b>
+
+        
 <br>
-        <hr>
-  
+        <hr>
+  
 
-      <header style="display: none;">
-          </header>
-      <section style="display: none;">
-          </section>
+      <header style="display: none;">
+          </header>
+      <section style="display: none;">
+          </section>
 
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
 </html>
