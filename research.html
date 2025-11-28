@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <title>Zeyi Qian, Clark University</title>
 
+  <!-- 响应式布局的关键 meta 标签 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="stylesheets/styles.css">
@@ -12,39 +13,31 @@
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
 
   <style>
-    /*
-     * 优化后的 CSS 样式
-     */
-    
     body {
       background-color: #ffffff;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif; /* 确保字体可读性 */
     }
 
     /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
     html, body {
-      margin: 0;
-      padding: 0;
-    }
-    
-    .wrapper {
-      /* **核心设置：最大宽度 + 居中** */
-      max-width: 1200px; /* 您希望的最大宽度 */
-      margin: 0 auto;    /* 左右外边距为 auto，实现居中 */
-      
-      /* 统一的内边距 */
-      padding: 20px; 
-    }
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  /* 可选：限制最大宽度、居中显示 */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* 新增 — 给内容向下留一些空白 */
+  padding-top: 20px;
+}
 
-    /* 顶部导航栏布局 */
     .top-navigation {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 10px;
+      padding: 10px 0;
       border-bottom: 1px solid #eee;
     }
     .nav-links {
@@ -63,40 +56,60 @@
       color: #000;
     }
 
-    /* **关键修改 3: 强制单栏布局，防止被外部样式影响** */
     .main-profile-area {
-      display: block; /* 强制块级元素，消除潜在的 Flex/Grid 影响 */
-      width: 100%;    /* 确保占据父容器全部宽度 */
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
       margin-top: 30px;
     }
-    
-    /* **关键修改 4: 覆盖 Github 样式中可能导致分栏或错位的锚点/标题样式** */
-    .main-profile-area h2 {
-        border-bottom: none; /* 移除可能的分隔线 */
-        padding-bottom: 0;
-        margin-top: 25px; /* 增加标题间距 */
+    .profile-info {
+      flex: 0 0 300px;
+      text-align: center;
+      padding-top: 5px;
     }
-    
-    .main-profile-area h2 .anchor {
-        /* 移除或隐藏可能占用空间的锚点图标和链接 */
-        display: none; 
-    }
-    
-    /* 确保工作/论文列表项没有奇怪的对齐 */
-    .main-profile-area p {
-        line-height: 1.5;
-        margin-bottom: 15px !important; /* 增加列表项之间的垂直间距 */
+    .intro-text {
+      flex-grow: 1;
+      padding-top: 5px;
     }
 
+    .profile-headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-info h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .profile-info p {
+      font-size: 1.1em;
+      margin: 0 0 10px 0;
+      color: #555;
+    }
+
+    .intro-box {
+      padding: 10px 20px 5px 20px;
+      background-color: #f9f9f9;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #444;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
 
     /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
     @media only screen and (max-width: 768px) {
       .wrapper {
-        /* 移动端使用更紧凑的边距 */
-        padding: 10px; 
+        width: 100%;
+        padding: 0 10px;
       }
       .top-navigation {
-        /* 导航栏垂直堆叠 */
         flex-direction: column;
         align-items: flex-start;
       }
@@ -106,7 +119,26 @@
         margin-top: 10px;
       }
       .main-profile-area {
+        flex-direction: column;
+        gap: 20px;
         margin-top: 20px;
+      }
+      .profile-info {
+        flex: none;
+        width: 100%;
+        padding-top: 0;
+      }
+      .intro-text {
+        width: 100%;
+        padding-top: 0;
+      }
+      .profile-headshot {
+        width: 150px;
+        height: 150px;
+      }
+      .intro-box {
+        padding: 10px 15px;
+        font-size: 14px;
       }
     }
   </style>
