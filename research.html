@@ -1,132 +1,147 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Zeyi Qian, Clark University</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Zeyi Qian, Clark University</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 响应式布局的关键 meta 标签 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link rel="stylesheet" href="stylesheets/github-light.css">
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
 
-  <style>
-    body {
-      background-color: #ffffff;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
-    html, body {
-  margin: 0;
-  padding: 0;
+    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
+    html, body {
+  margin: 0;
+  padding: 0;
 }
 .wrapper {
-  /* 限制最大宽度、居中显示 */
-  max-width: 1000px; /* 您可以在这里增加宽度，例如 1200px */
-  margin: 0 auto;
-  /* 给内容向下留一些空白 */
-  padding-top: 20px;
+  /* 可选：限制最大宽度、居中显示 */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* 新增 — 给内容向下留一些空白 */
+  padding-top: 20px;
 }
 
-    .top-navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-    }
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-    .top-navigation a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    .top-navigation .name-title {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #000;
-    }
+    .top-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+    .top-navigation a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .top-navigation .name-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+    }
 
-    /* 以下是已删除的 Flexbox 布局样式：
-       - .main-profile-area (已删除 display: flex, gap, align-items)
-       - .profile-info (已删除所有固定宽度 flex 属性)
-       - .intro-text (已删除 flex-grow)
-    */
-
-    /* 个人头像和信息样式 (保留，但不再是侧边栏) */
+    .main-profile-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 30px;
+    }
     .profile-info {
-      text-align: center;
-      padding-top: 5px;
-    }
-    .intro-text {
-      padding-top: 5px;
-    }
+      flex: 0 0 300px;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .intro-text {
+      flex-grow: 1;
+      padding-top: 5px;
+    }
 
-    .profile-headshot {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 8px solid #ffffff;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      margin-top: 10px;
-      margin-bottom: 15px;
-    }
+    .profile-headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
 
-    .profile-info h1 {
-      font-size: 1.8em;
-      margin: 0;
-    }
-    .profile-info p {
-      font-size: 1.1em;
-      margin: 0 0 10px 0;
-      color: #555;
-    }
+    .profile-info h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .profile-info p {
+      font-size: 1.1em;
+      margin: 0 0 10px 0;
+      color: #555;
+    }
 
-    .intro-box {
-      padding: 10px 20px 5px 20px;
-      background-color: #f9f9f9;
-      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #444;
-      margin-top: 10px;
-      line-height: 1.6;
-    }
+    .intro-box {
+      padding: 10px 20px 5px 20px;
+      background-color: #f9f9f9;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #444;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
 
-    /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
-    @media only screen and (max-width: 768px) {
-      .wrapper {
-        width: 100%;
-        padding: 0 10px;
-      }
-      .top-navigation {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-      }
-      /* 删除了移动端对 main-profile-area 和 profile-info 的 Flexbox 调整 */
-      .profile-headshot {
-        width: 150px;
-        height: 150px;
-      }
-      .intro-box {
-        padding: 10px 15px;
-        font-size: 14px;
-      }
-    }
-  </style>
+    /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
+    @media only screen and (max-width: 768px) {
+      .wrapper {
+        width: 100%;
+        padding: 0 10px;
+      }
+      .top-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .main-profile-area {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .profile-info {
+        flex: none;
+        width: 100%;
+        padding-top: 0;
+      }
+      .intro-text {
+        width: 100%;
+        padding-top: 0;
+      }
+      .profile-headshot {
+        width: 150px;
+        height: 150px;
+      }
+      .intro-box {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
