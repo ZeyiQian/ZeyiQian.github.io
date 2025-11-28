@@ -25,13 +25,14 @@
       padding: 0;
     }
     .wrapper {
-      /* 限制最大宽度、居中显示 */
-      max-width: 1000px;
-      margin: 0 auto;
+      /* **关键修改 1: 增加最大宽度，使其更宽** */
+      max-width: 1200px; 
+      /* **关键修改 2: 确保左右外边距为 auto，实现居中** */
+      margin: 0 auto; 
       /* 给内容向下留一些空白 */
       padding-top: 20px;
-      padding-left: 10px; /* 新增：在桌面视图为内容提供一些左右边距 */
-      padding-right: 10px;
+      padding-left: 20px; /* 增加内边距以避免内容贴边 */
+      padding-right: 20px; /* 增加内边距以避免内容贴边 */
     }
 
     .top-navigation {
@@ -57,16 +58,10 @@
       color: #000;
     }
 
-    /* 关键修改：取消 Flex 布局，内容将自然占据全部宽度 */
+    /* 单栏布局，取消 Flex */
     .main-profile-area {
-      /* display: flex; REMOVED */
-      /* align-items: flex-start; REMOVED */
-      /* gap: 30px; REMOVED */
       margin-top: 30px;
     }
-
-    /* 移除左侧栏对应的样式 (现在 section 将占据 full width) */
-    /* .profile-info, .intro-text, .profile-headshot, .intro-box 等样式已移除或不再适用 */
 
     /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
     @media only screen and (max-width: 768px) {
@@ -84,8 +79,6 @@
         margin-top: 10px;
       }
       .main-profile-area {
-        /* 在移动端，内容默认就是垂直堆叠的 */
-        flex-direction: column;
         gap: 20px;
         margin-top: 20px;
       }
