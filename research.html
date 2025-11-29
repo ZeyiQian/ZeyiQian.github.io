@@ -54,18 +54,35 @@
       color: #000;
     }
 
-    /* --- 清理掉不再需要的双栏布局 CSS 规则 --- */
-    /* 删除了 .main-profile-area, .profile-info, .intro-text, .profile-headshot, .intro-box 等相关规则 */
-
-    /* 如果外部 CSS 导致分栏，添加以下规则强制单列显示 */
-    .wrapper section {
-        display: block;
-        width: 100%;
-        clear: both;
+    /* 强制主要内容以单列显示，并增加间距 */
+    .main-profile-area {
+        display: block; /* 确保它不是 flex 容器，独占一行 */
         margin-top: 30px; 
+        margin-bottom: 30px; /* 增加内容区域上下的间距 */
+    }
+    /* 移除所有分栏 flex 规则 */
+    /* .profile-info, .intro-text, .profile-headshot 的旧规则已删除 */
+
+    .intro-box {
+        padding: 10px 20px 5px 20px;
+        background-color: #f9f9f9;
+        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        color: #444;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+    
+    /* 优化论文列表的间距 */
+    .wrapper section h2 {
+        margin-top: 40px; 
+    }
+    .wrapper section p {
+        margin-bottom: 20px;
+        line-height: 1.4;
     }
 
-    /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
+    /* --- 响应式 (mobile) 样式 --- */
     @media only screen and (max-width: 768px) {
       .wrapper {
         width: 100%;
@@ -80,7 +97,6 @@
         gap: 10px;
         margin-top: 10px;
       }
-      /* 删除了所有不再需要的 mobile 分栏规则 */
     }
   </style>
 </head>
@@ -98,7 +114,20 @@
       </div>
     </nav>
 
-          <section>
+    <div class="main-profile-area">
+        <div class="intro-box">
+            <p>
+               &#9656; Hello! I am a Ph.D. candidate in <a href="https://www.clarku.edu/departments/economics/phd-program/">Economics</a> at <a href="https://www.clarku.edu/">Clark University</a>. <br>
+               <br>
+              &#9656; My research focuses on <b>Urban Economics</b> and <b>International Trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
+              <br>
+               &#9656; I am currently on the <b>2025-2026 job market</b>.
+          </p>
+        </div>
+    </div>
+
+
+      <section>
           <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scheduled Presentations</h2>
 
        &#9656;<del>Nov, 2025, Southern Economic Association Annual Meeting, Tampa, FL</del> <br>
