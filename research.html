@@ -25,10 +25,9 @@
             padding: 0;
         }
         .wrapper {
-            /* 可选：限制最大宽度、居中显示 */
+            /* 保持最大宽度和居中 */
             max-width: 1000px;
             margin: 0 auto;
-            /* 新增 — 给内容向下留一些空白 */
             padding-top: 20px;
         }
 
@@ -60,52 +59,25 @@
             color: #8B0000; /* 深红色 Dark Red */
         }
 
-        /* --- 核心布局修改 --- */
+        /* --- 核心布局修复 --- */
         .main-profile-area {
-            /* 保持 flex，但由于只有一个子元素，它会自动扩展 */
-            display: flex; 
+            /* 移除 Flex 布局，让内容自动占据 100% 宽度 */
+            /* display: flex; <--- 已移除 */
             align-items: flex-start;
-            gap: 0px; /* 移除间隔 */
+            gap: 0px; 
             margin-top: 30px;
         }
 
-        /* profile-info 样式 (保留以防您日后需要，但已从 HTML 中移除) */
-        .profile-info {
-            flex: 0 0 0px; /* 强制宽度为零 */
-            text-align: center;
-            padding-top: 5px;
-            /* width: 0; */
-        }
-
-        /* ❗ intro-text 现在占据全部可用空间 */
         .intro-text {
-            flex-grow: 1; /* 占据剩余空间 */
-            width: 100%; /* 确保它能填满 wrapper 的宽度 */
+            /* 移除 Flex 属性 */
+            /* flex-grow: 1; <--- 已移除 */
+            width: 100%; /* 确保它能填满容器宽度 */
             padding-top: 5px;
         }
-        /* --- 核心布局修改结束 --- */
+        /* --- 核心布局修复结束 --- */
 
-        .profile-headshot {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid #ffffff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
-
-        .profile-info h1 {
-            font-size: 1.8em;
-            margin: 0;
-        }
-        .profile-info p {
-            font-size: 1.1em;
-            margin: 0 0 10px 0;
-            color: #555;
-        }
-
+        /* 移除已删除元素的冗余样式：profile-info, profile-headshot, profile-info h1/p */
+        
         .intro-box {
             padding: 10px 20px 5px 20px;
             background-color: #f9f9f9;
@@ -116,7 +88,7 @@
             line-height: 1.6;
         }
 
-        /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
+        /* --- 响应式 (mobile) 部分 --- */
         @media only screen and (max-width: 768px) {
             .wrapper {
                 width: 100%;
@@ -131,9 +103,9 @@
                 gap: 10px;
                 margin-top: 10px;
             }
-            /* 在移动端，因为左侧列已删除，这里不需要太多改动 */
             .main-profile-area {
-                flex-direction: column;
+                /* 在移动端也不再是 Flex */
+                /* flex-direction: column; <--- 已移除 */
                 gap: 0px; 
                 margin-top: 20px;
             }
@@ -141,15 +113,6 @@
             .intro-text {
                 width: 100%;
                 padding-top: 0;
-            }
-            .profile-info {
-                flex: none;
-                width: 100%;
-                padding-top: 0;
-            }
-            .profile-headshot {
-                width: 150px;
-                height: 150px;
             }
             .intro-box {
                 padding: 10px 15px;
