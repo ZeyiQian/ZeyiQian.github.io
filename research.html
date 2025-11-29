@@ -1,221 +1,269 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Zeyi Qian, Clark University</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Zeyi Qian, Clark University</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 响应式布局的关键 meta 标签 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="stylesheets/styles.css">
-  <link rel="stylesheet" href="stylesheets/github-light.css">
-  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/github-light.css">
+  <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
 
-  <style>
-    body {
-      background-color: #ffffff;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
-    html, body {
-  margin: 0;
-  padding: 0;
+  <style>
+    body {
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
+    html, body {
+  margin: 0;
+  padding: 0;
 }
 .wrapper {
-  /* 限制最大宽度、居中显示 */
-  max-width: 1000px;
-  margin: 0 auto;
-  /* 给内容向下留一些空白 */
-  padding-top: 20px;
+  /* 可选：限制最大宽度、居中显示 */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* 新增 — 给内容向下留一些空白 */
+  padding-top: 20px;
 }
 
-    .top-navigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-    }
-    .nav-links {
-      display: flex;
-      gap: 50px;
-    }
-    .top-navigation a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    .top-navigation .name-title {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #000;
-    }
-
-    /* 强制主要内容以单列显示，并增加间距 */
-    .main-profile-area {
-        display: block; /* 确保它不是 flex 容器，独占一行 */
-        margin-top: 30px; 
-        margin-bottom: 30px; /* 增加内容区域上下的间距 */
+    .top-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
     }
-    /* 移除所有分栏 flex 规则 */
-    /* .profile-info, .intro-text, .profile-headshot 的旧规则已删除 */
+    .nav-links {
+      display: flex;
+      gap: 50px;
+    }
+    .top-navigation a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .top-navigation .name-title {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .main-profile-area {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .profile-info {
+      flex: 0 0 300px;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .intro-text {
+      flex-grow: 1;
+      padding-top: 5px;
+    }
+
+    .profile-headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #ffffff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-info h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+    .profile-info p {
+      font-size: 1.1em;
+      margin: 0 0 10px 0;
+      color: #555;
+    }
 
     .intro-box {
-        padding: 10px 20px 5px 20px;
-        background-color: #f9f9f9;
-        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 15px;
-        color: #444;
-        margin-top: 10px;
-        line-height: 1.6;
-    }
-    
-    /* 优化论文列表的间距 */
-    .wrapper section h2 {
-        margin-top: 40px; 
-    }
-    .wrapper section p {
-        margin-bottom: 20px;
-        line-height: 1.4;
+      padding: 10px 20px 5px 20px;
+      background-color: #f9f9f9;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      color: #444;
+      margin-top: 10px;
+      line-height: 1.6;
     }
 
-    /* --- 响应式 (mobile) 样式 --- */
-    @media only screen and (max-width: 768px) {
-      .wrapper {
-        width: 100%;
-        padding: 0 10px;
-      }
-      .top-navigation {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links {
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 10px;
-      }
-    }
-  </style>
+    /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
+    @media only screen and (max-width: 768px) {
+      .wrapper {
+        width: 100%;
+        padding: 0 10px;
+      }
+      .top-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .main-profile-area {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .profile-info {
+        flex: none;
+        width: 100%;
+        padding-top: 0;
+      }
+      .intro-text {
+        width: 100%;
+        padding-top: 0;
+      }
+      .profile-headshot {
+        width: 150px;
+        height: 150px;
+      }
+      .intro-box {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="wrapper">
-    <nav class="top-navigation">
-      <span class="name-title">Zeyi Qian (钱则一)</span>
-      <div class="nav-links">
- <a href="https://ZeyiQian.github.io/"style="color: #8B0000;">HOME</a>
-        <a href="https://ZeyiQian.github.io/research.html"style="color: #8B0000;">RESEARCH</a>
-        <a href="https://ZeyiQian.github.io/teaching.html"style="color: #8B0000;">TEACHING</a>
-        <a href="https://ZeyiQian.github.io/CV_ZQ.pdf"style="color: #8B0000;">CV</a>
-        <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf"style="color: #8B0000;">简历</a>
-      </div>
-    </nav>
+  <div class="wrapper">
+    <nav class="top-navigation">
+      <span class="name-title">Zeyi Qian (钱则一)</span>
+      <div class="nav-links">
+ <a href="https://ZeyiQian.github.io/"style="color: #8B0000;">HOME</a>
+        <a href="https://ZeyiQian.github.io/research.html"style="color: #8B0000;">RESEARCH</a>
+        <a href="https://ZeyiQian.github.io/teaching.html"style="color: #8B0000;">TEACHING</a>
+        <a href="https://ZeyiQian.github.io/CV_ZQ.pdf"style="color: #8B0000;">CV</a>
+        <a href="https://ZeyiQian.github.io/CV_ZQ(Chinese).pdf"style="color: #8B0000;">简历</a>
+      </div>
+    </nav>
 
     <div class="main-profile-area">
-        <div class="intro-box">
-            <p>
-               &#9656; Hello! I am a Ph.D. candidate in <a href="https://www.clarku.edu/departments/economics/phd-program/">Economics</a> at <a href="https://www.clarku.edu/">Clark University</a>. <br>
-               <br>
-              &#9656; My research focuses on <b>Urban Economics</b> and <b>International Trade</b>. Specifically, I use general equilibrium models to investigate the factors that influence the spatial distribution of economic activities and productivity growth in China, Japan, and the U.S.<br> 
-              <br>
-               &#9656; I am currently on the <b>2025-2026 job market</b>.
-          </p>
+      <div class="profile-info">
+        <div class="image-container">
+          <img src="f.jpg" alt="Headshot" class="profile-headshot">
         </div>
+        <div class="contact-buttons" style="display: flex; justify-content: center; gap: 8px;">
+          <a href="mailto:zeqian@clarku.edu" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #FFF0F0; text-decoration: none; color: #444;">
+            <i class="fa fa-fw fa-envelope-square"></i> Email
+          </a>
+          <a href="https://twitter.com/ZYQian_ECON" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #FFF0F0; text-decoration: none; color: #444;">
+            <i class="fa fa-fw fa-twitter-square"></i> Twitter
+          </a>
+          <a href="http://github.com/ZeyiQian" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #FFF0F0; text-decoration: none; color: #444;">
+            <i class="fa fa-fw fa-github-square"></i> GitHub
+          </a>
+        </div>
+      </div>
+<br>
+      <div class="intro-text">
+      <section>
+          <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scheduled Presentations</h2>
+
+       &#9656;<del>Nov, 2025, Southern Economic Association Annual Meeting, Tampa, FL</del> <br>
+        
+        &#9656;<del>Nov, 2025, Midwest International Trade & Theory Conference, Penn State</del> <br>
+        
+        &#9656;<del>Mar, 2025, Midwest Economics Association Annual Meeting, Kansas City, MO</del> <br>
+          
+ <br>
+        <hr>
+        
+        <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Papers</h2>
+
+        <p>
+          <b> <a href="https://zeyiqian.github.io/Paper/JMP_ZQ.pdf">Trade Costs, Entry Costs, and Regional Economic Growth in China </a> </b> <br>
+          <span style="font-weight:900">Job Market Paper</span> <br>
+          with <a href="https://sites.google.com/site/kensukesuzuki04/">Kensuke Suzuki</a> and <a href="https://wordpress.clarku.edu/juzhang/">Junfu Zhang</a>
+        </p>
+        
+        <p>
+          <b>Aging Economy and Comparative Advantage: A Quantitative Analysis of Japan </b> <br>
+          with <a href="https://sites.google.com/site/kensukesuzuki04/">Kensuke Suzuki</a> and <a href="https://wordpress.clarku.edu/juzhang/">Junfu Zhang</a>
+        </p>
+        
+        <p>
+          <b>Breaking Barriers: Regional Economic Integration and National Market Unification </b><br>
+          <i>China Economic Review</i> Under Review <br> with Haoyun Zhao
+        </p>
+        
+        <hr>
+        
+        <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Works in Progress</h2>
+        
+        <p> <b>Trade Shock and Dynamic Labor Allocation </b> </p>
+
+        <p> <b>Leisure Demand and Pastime Trade</b> <br> with <a href="http://jszy.whu.edu.cn/fushihe/en/index.htm">Shihe Fu</a> </p>
+          
+        <hr>
+    
+        <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
+        
+        <p>
+          <b> <a href="https://doi.org/10.1080/13504851.2025.2473662">How City Size Affects Firm Survival: Evidence from Chinese Enterprise Registration Data </a></b> <br>
+          with Haoyun Zhao, Yameng Guo, and Yang Ye <br> 
+          <i>Applied Economics Letters</i>, 2025, 1–5.
+        </p>
+          
+        <p>
+          <b> <a href="https://onlinelibrary.wiley.com/doi/10.1002/ise3.102"> Estimating Round-Tripping FDI from Firm-Level Data in China</a></b> <br>
+          with <a href="https://wordpress.clarku.edu/juzhang/">Junfu Zhang </a> and <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a> <br>
+          <i>International Studies of Economics</i>, 2025, 20(2): 138-152.
+        </p>
+      
+        <hr>
+          
+        <h2><a id="other-publication" class="anchor" href="#other" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publications in Chinese</h2>
+        
+        <p> 
+          <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/ZeyiQian/ZeyiQian.github.io/blob/main/Paper/TalentPolicy2025.pdf">The Spatiotemporal Evolution of Talent Policies and Their Impact on New Quality Productive Forces in Chinese Prefecture-Level Cities: Based on Quantitative Analysis of 3308 Policy Texts from 2002 to 2021</a> <br>
+          with Yang Ye, <a href="https://faculty.csu.edu.cn/xujie1/en/index/209136/list/index.htm">Jie Xu</a>, and Zhanglong Huang <br>
+          <i>Studies in Science of Science</i>《科学学研究》, 2025, 1-18. 
+        </p>
+          
+        <p> 
+          <a style="margin:0; font-size:100%; font-weight:bold" href="http://jjll.ruc.edu.cn/EN/Y2022/V42/I3/100">International Twin Cities and Chinese Export Activities</a> <br>
+          with Jingyu Yang and <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a> <br>
+          <i>Economic Theory and Business Management</i>《经济理论与经济管理》, 2022, 42(3), 100-112. 
+        </p>
+          
+        <p> 
+          <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/ZeyiQian/ZeyiQian.github.io/blob/main/Paper/FDI2021.pdf">Promotion Effect of FDI on Enterprise Survival in Host Country —— A Discussion on Industry Safety and Market Access of Foreign Investment</a> <br>
+          with <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a>, Yu Chen, and Zhenhuai Shi <br>
+          <i>China's Industrial Economy</i>《中国工业经济》, 2021, 7, 137-155.
+        </p>
+        
+        <p> 
+          <a style="margin:0; font-size:100%; font-weight:bold" href="http://html.rhhz.net/NFJJ/html/20210205.htm">The Man-Bear Race: A New Explanation of Regional Competition for High-Speed Rail Stations Battle in China</a> <br>
+          with <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a>, Zhenhuai Shi, and <a href="https://faculty.csu.edu.cn/lixiaoping/zh_CN/index.htm">Xiaoping Li </a> <br>
+          <i>South China Journal of Economics</i>《南方经济》, 2021, 40(2), 66-83.
+        </p>
+
+        <hr>
+          
+        <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://ZeyiQian.github.io/Otherpaper.html">Other Works</a></h2> 
+      </section>
     </div>
-
-
-      <section>
-          <h2><a id="upcoming-presentations" class="anchor" href="#UpcomingPresentations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scheduled Presentations</h2>
-
-       &#9656;<del>Nov, 2025, Southern Economic Association Annual Meeting, Tampa, FL</del> <br>
-        
-        &#9656;<del>Nov, 2025, Midwest International Trade & Theory Conference, Penn State</del> <br>
-        
-        &#9656;<del>Mar, 2025, Midwest Economics Association Annual Meeting, Kansas City, MO</del> <br>
-          
- <br>
-        <hr>
-        
-        <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Working Papers</h2>
-
-        <p>
-          <b> <a href="https://zeyiqian.github.io/Paper/JMP_ZQ.pdf">Trade Costs, Entry Costs, and Regional Economic Growth in China </a> </b> <br>
-          <span style="font-weight:900">Job Market Paper</span> <br>
-          with <a href="https://sites.google.com/site/kensukesuzuki04/">Kensuke Suzuki</a> and <a href="https://wordpress.clarku.edu/juzhang/">Junfu Zhang</a>
-        </p>
-        
-        <p>
-          <b>Aging Economy and Comparative Advantage: A Quantitative Analysis of Japan </b> <br>
-          with <a href="https://sites.google.com/site/kensukesuzuki04/">Kensuke Suzuki</a> and <a href="https://wordpress.clarku.edu/juzhang/">Junfu Zhang</a>
-        </p>
-        
-        <p>
-          <b>Breaking Barriers: Regional Economic Integration and National Market Unification </b><br>
-          <i>China Economic Review</i> Under Review <br> with Haoyun Zhao
-        </p>
-        
-        <hr>
-        
-        <h2><a id="works-in-progress" class="anchor" href="#workinprogress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Works in Progress</h2>
-        
-        <p> <b>Trade Shock and Dynamic Labor Allocation </b> </p>
-
-        <p> <b>Leisure Demand and Pastime Trade</b> <br> with <a href="http://jszy.whu.edu.cn/fushihe/en/index.htm">Shihe Fu</a> </p>
-          
-        <hr>
-    
-        <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Published &amp; Forthcoming Papers</h2>
-        
-        <p>
-          <b> <a href="https://doi.org/10.1080/13504851.2025.2473662">How City Size Affects Firm Survival: Evidence from Chinese Enterprise Registration Data </a></b> <br>
-          with Haoyun Zhao, Yameng Guo, and Yang Ye <br> 
-          <i>Applied Economics Letters</i>, 2025, 1–5.
-        </p>
-          
-        <p>
-          <b> <a href="https://onlinelibrary.wiley.com/doi/10.1002/ise3.102"> Estimating Round-Tripping FDI from Firm-Level Data in China</a></b> <br>
-          with <a href="https://wordpress.clarku.edu/juzhang/">Junfu Zhang </a> and <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a> <br>
-          <i>International Studies of Economics</i>, 2025, 20(2): 138-152.
-        </p>
-      
-        <hr>
-          
-        <h2><a id="other-publication" class="anchor" href="#other" aria-hidden="true"><span class="octicon octicon-link"></span></a>Publications in Chinese</h2>
-        
-        <p> 
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/ZeyiQian/ZeyiQian.github.io/blob/main/Paper/TalentPolicy2025.pdf">The Spatiotemporal Evolution of Talent Policies and Their Impact on New Quality Productive Forces in Chinese Prefecture-Level Cities: Based on Quantitative Analysis of 3308 Policy Texts from 2002 to 2021</a> <br>
-          with Yang Ye, <a href="https://faculty.csu.edu.cn/xujie1/en/index/209136/list/index.htm">Jie Xu</a>, and Zhanglong Huang <br>
-          <i>Studies in Science of Science</i>《科学学研究》, 2025, 1-18. 
-        </p>
-          
-        <p> 
-          <a style="margin:0; font-size:100%; font-weight:bold" href="http://jjll.ruc.edu.cn/EN/Y2022/V42/I3/100">International Twin Cities and Chinese Export Activities</a> <br>
-          with Jingyu Yang and <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a> <br>
-          <i>Economic Theory and Business Management</i>《经济理论与经济管理》, 2022, 42(3), 100-112. 
-        </p>
-          
-        <p> 
-          <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/ZeyiQian/ZeyiQian.github.io/blob/main/Paper/FDI2021.pdf">Promotion Effect of FDI on Enterprise Survival in Host Country —— A Discussion on Industry Safety and Market Access of Foreign Investment</a> <br>
-          with <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a>, Yu Chen, and Zhenhuai Shi <br>
-          <i>China's Industrial Economy</i>《中国工业经济》, 2021, 7, 137-155.
-        </p>
-        
-        <p> 
-          <a style="margin:0; font-size:100%; font-weight:bold" href="http://html.rhhz.net/NFJJ/html/20210205.htm">The Man-Bear Race: A New Explanation of Regional Competition for High-Speed Rail Stations Battle in China</a> <br>
-          with <a href="http://nads.ruc.edu.cn/yjtd/qzjs/js/33671670d25b49c3b18cca4e3f15d839.htm">Qiangyuan Chen</a>, Zhenhuai Shi, and <a href="https://faculty.csu.edu.cn/lixiaoping/zh_CN/index.htm">Xiaoping Li </a> <br>
-          <i>South China Journal of Economics</i>《南方经济》, 2021, 40(2), 66-83.
-        </p>
-
-        <hr>
-          
-        <h2><a id="published-papers-updated" class="anchor" href="#publications" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://ZeyiQian.github.io/Otherpaper.html">Other Works</a></h2> 
-      </section>
-
-    
-    <script src="javascripts/scale.fix.js"></script>
-  </div>
+    
+    <script src="javascripts/scale.fix.js"></script>
+  </div>
 </body>
 </html>
