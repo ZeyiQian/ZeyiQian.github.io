@@ -56,51 +56,11 @@
       color: #000;
     }
 
-    .main-profile-area {
-      display: flex;
-      align-items: flex-start;
-      gap: 30px;
-      margin-top: 50px;
-    }
-    .profile-info {
-      flex: 0 0 300px;
-      text-align: center;
-      padding-top: 5px;
-    }
-    .intro-text {
-      flex-grow: 1;
-      padding-top: 5px;
-    }
-
-    .profile-headshot {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 8px solid #ffffff;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      margin-top: 10px;
-      margin-bottom: 15px;
-    }
-
-    .profile-info h1 {
-      font-size: 1.8em;
-      margin: 0;
-    }
-    .profile-info p {
-      font-size: 1.1em;
-      margin: 0 0 10px 0;
-      color: #555;
-    }
-
-    .intro-box {
-      padding: 10px 20px 5px 20px;
-      background-color: #f9f9f9;
-      font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      color: #444;
-      margin-top: 10px;
-      line-height: 1.6;
+   .wrapper section {
+        display: block;
+        width: 100%;
+        clear: both;
+        margin-top: 30px; 
     }
 
     /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
@@ -117,28 +77,6 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 10px;
-      }
-      .main-profile-area {
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 20px;
-      }
-      .profile-info {
-        flex: none;
-        width: 100%;
-        padding-top: 0;
-      }
-      .intro-text {
-        width: 100%;
-        padding-top: 0;
-      }
-      .profile-headshot {
-        width: 150px;
-        height: 150px;
-      }
-      .intro-box {
-        padding: 10px 15px;
-        font-size: 14px;
       }
     }
   </style>
@@ -157,25 +95,6 @@
       </div>
     </nav>
 
-    <div class="main-profile-area">
-      <div class="profile-info">
-        <div class="image-container">
-          <img src="f.jpg" alt="Headshot" class="profile-headshot">
-        </div>
-        <div class="contact-buttons" style="display: flex; justify-content: center; gap: 8px;">
-          <a href="mailto:zeqian@clarku.edu" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #FFF0F0; text-decoration: none; color: #444;">
-            <i class="fa fa-fw fa-envelope-square"></i> Email
-          </a>
-          <a href="https://twitter.com/ZYQian_ECON" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #FFF0F0; text-decoration: none; color: #444;">
-            <i class="fa fa-fw fa-twitter-square"></i> Twitter
-          </a>
-          <a href="http://github.com/ZeyiQian" style="padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #FFF0F0; text-decoration: none; color: #444;">
-            <i class="fa fa-fw fa-github-square"></i> GitHub
-          </a>
-        </div>
-      </div>
-<br>
-      <div class="intro-text">
   
       <section>
 
@@ -200,7 +119,7 @@
     
   
   </section>
-    </div>
+
     
     <script src="javascripts/scale.fix.js"></script>
   </div>
