@@ -13,27 +13,34 @@
   <script src="https://use.fontawesome.com/baff6f55f5.js"></script>
 
   <style>
+    :root {
+      --brand-red: #8B0000;
+      --brand-red-dark: #7a0000; /* 更克制的 hover 变化 */
+      --brand-red-focus: #b64040;
+    }
+
     body {
-      background-color: #ffffff;
+      background-color: #fcfbfa; /* 轻微暖白背景 */
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-a {
-      color: #8B0000; /* 深红色 */
+
+    a {
+      color: var(--brand-red);
     }
+
     /* --- 桌面 (desktop) 默认样式 / 固定布局 --- */
     html, body {
-  margin: 0;
-  padding: 0;
-} 
-.wrapper {
-  /* 可选：限制最大宽度、居中显示 */
-  max-width: 1000px;
-  margin: 0 auto;
-  /* 新增 — 给内容向下留一些空白 */
-  padding-top: 20px;
-}
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
 
     .top-navigation {
       display: flex;
@@ -42,16 +49,32 @@ a {
       padding: 10px 0;
       border-bottom: 1px solid #eee;
     }
+
     .nav-links {
       display: flex;
       gap: 65px;
     }
+
+    /* 更克制版状态层：只颜色变化，不加下划线动画 */
     .top-navigation a {
       text-decoration: none;
-      color: #333;
+      color: var(--brand-red);
       font-weight: bold;
       font-size: 1.1em;
+      transition: color 0.2s ease;
     }
+
+    .top-navigation a:hover,
+    .top-navigation a:focus {
+      color: var(--brand-red-dark);
+    }
+
+    .top-navigation a:focus-visible {
+      outline: 2px solid var(--brand-red-focus);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
     .top-navigation .name-title {
       font-size: 1.4em;
       font-weight: bold;
@@ -64,11 +87,13 @@ a {
       gap: 30px;
       margin-top: 30px;
     }
+
     .profile-info {
       flex: 0 0 300px;
       text-align: center;
       padding-top: 5px;
     }
+
     .intro-text {
       flex-grow: 1;
       padding-top: 5px;
@@ -89,6 +114,7 @@ a {
       font-size: 1.8em;
       margin: 0;
     }
+
     .profile-info p {
       font-size: 1.1em;
       margin: 0 0 10px 0;
@@ -103,6 +129,24 @@ a {
       color: #444;
       margin-top: 10px;
       line-height: 1.6;
+    }
+
+    /* 正文链接同样只做颜色变化 */
+    .intro-box a {
+      color: var(--brand-red);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .intro-box a:hover,
+    .intro-box a:focus {
+      color: var(--brand-red-dark);
+    }
+
+    .intro-box a:focus-visible {
+      outline: 2px solid var(--brand-red-focus);
+      outline-offset: 2px;
+      border-radius: 2px;
     }
 
     /* --- 响应式 (mobile) 部分: 当屏幕宽度较窄 (手机) 时启用 --- */
